@@ -1,0 +1,38 @@
+body{padding:1em; font-family:arial; }
+input{display:none;}
+label{padding:.2em .5em;}
+label:hover{background:#ccc; cursor:pointer;}
+input:checked + label{font-weight:bold; background:#ccc;}
+
+.flex {
+	display: flex;	
+    background: #ccc;   
+	padding: 5px;
+	width: 500px;
+	position: relative;
+}
+
+.itm {
+    background: green;   
+	font-size: 2.5rem;     
+	color: #eee;     
+	margin: 5px;     
+	padding: 15px; 
+	transition: .5s;
+}
+
+#two:checked ~ .flex .itm1 {order: 3; transition: 2s;}
+#two:checked ~ .flex .itm2 {order: 4; transition: 2s;}
+#two:checked ~ .flex .itm3 {order: 1; transition: 2s;}
+#two:checked ~ .flex .itm4 {order: 2; transition: 2s;}
+#row:checked ~ .flex {flex-direction: row; transition: .5s;}
+#column:checked ~ .flex {flex-direction: column; transition: .5s;}
+#column:checked ~ .flex3 {display: block;}
+#red:checked ~ .flex .itm {background: red; transition: .5s;}
+#green:checked ~ .flex .itm {background: green; transition: .5s;}
+#blue:checked ~ .flex .itm {background: blue; transition: .5s;}
+#yellow:checked ~ .flex .itm {background: yellow; transition: .5s;}
+#start:checked ~ .flex {justify-content: flex-start;}
+#end:checked ~ .flex {justify-content: flex-end; }
+#space-between:checked ~ .flex {justify-content: space-between;}
+#center:checked ~ .flex {justify-content: center;}
